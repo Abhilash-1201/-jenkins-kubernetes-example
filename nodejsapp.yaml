@@ -35,4 +35,4 @@ spec:
   - name: http
     targetPort: 3000
     port: 80
-  externalTrafficPolicy: Local
+  
