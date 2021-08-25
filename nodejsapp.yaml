@@ -33,5 +33,6 @@ spec:
   type: LoadBalancer
   ports:
   - name: http
+  externalTrafficPolicy: Local
     targetPort: 3000
     port: 80
