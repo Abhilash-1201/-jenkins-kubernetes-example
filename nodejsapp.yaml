@@ -2,34 +2,34 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: nodejs-app-1.0
+  name: nodejs-app
   namespace: default
   labels:
-    app: nodejs-app-1.0
+    app: nodejs-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nodejs-app-1.0
+      app: nodejs-app
   template:
     metadata:
       labels:
-        app: nodejs-app-1.0
+        app: nodejs-app
     spec:
       containers:
       - name: nodejs-app
-        image: "abhilashnarayan/nodejs-app-1.0"
+        image: "devopshint/nodejsapp-1.0:latest"
         ports:
           - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-app-1.0
+  name: nodejs-app
   namespace: default
 spec:
   selector:
-    app: nodejs-app-1.0
+    app: nodejs-app
   type: LoadBalancer
   ports:
   - name: http
