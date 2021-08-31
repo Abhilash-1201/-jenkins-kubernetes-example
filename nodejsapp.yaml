@@ -67,4 +67,13 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  
+  - host: javawebapp.testdomainname.gq 
+    http:
+      paths:
+      - backend:
+          service:
+            name: javaapp
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
