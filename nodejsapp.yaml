@@ -77,3 +77,13 @@ spec:
               number: 80
         path: /
         pathType: Prefix
+ - host: pythonapp.testdomainname.gq 
+    http:
+      paths:
+      - backend:
+          service:
+            name: python-app
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
